@@ -41,7 +41,7 @@ int task01(int hour1, int minute1, int second1, int hour2, int minute2, int seco
 	int hour = hour2 - hour1;
 	int minute = minute2 - minute1;
 	int second = second2 - second1;
+	second += hour * 3600 + minute * 60;
 
-	return (hour * 3600 + minute * 60 + second) > 0 ? hour * 3600 + minute * 60 + second
-		: -(hour * 3600 + minute * 60 + second);
+	return second > 0 ? second : -second;
 }
