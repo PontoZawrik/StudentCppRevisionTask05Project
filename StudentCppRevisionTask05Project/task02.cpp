@@ -46,6 +46,5 @@ bool task02(int number) {
         return false;
     }
 
-    cout << number << " " << revers(number) << endl;
     return number == revers(number);
 }
