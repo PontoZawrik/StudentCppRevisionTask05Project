@@ -43,14 +43,14 @@ int task03(int v, int t) {
 		return 0;
 	}
 
-	int k = (v * t) / 56;
 	int s = (v * t);
+	int k = s / 56;
 	k = k == 0 ? 1 : k;
 
 	if (v >= 0) {
-		return (v * t) <= 56 ? (v * t) : (v * t) - (56 * k);
+		return s <= 56 ? s : s - (56 * k);
 	}
 
 	k = k > 0 ? k : -k;
-	return (v * t) >= -56 ? 56 + (v * t) : 56 + ((56 * k) + (v * t));
+	return s >= -56 ? 56 + s : 56 + ((56 * k) + s);
 }
