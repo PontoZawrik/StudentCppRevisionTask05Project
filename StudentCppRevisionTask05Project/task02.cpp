@@ -30,6 +30,22 @@
 *	[output 5]: false
 */
 
+int revers(int number) {
+    int t = 0;
+
+    while (number > 0) {
+        t *= 10;
+        t = number % 10 == 0 ? t : t + number % 10;
+        number /= 10;
+    }
+    return t;
+}
+
 bool task02(int number) {
-    return false;
+    if (number < 0 || number > 9999) {
+        return false;
+    }
+
+    cout << number << " " << revers(number) << endl;
+    return number == revers(number);
 }
