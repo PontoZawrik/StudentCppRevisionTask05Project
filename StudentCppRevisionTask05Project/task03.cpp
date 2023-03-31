@@ -37,23 +37,20 @@
 
 int task03(int v, int t) {
 	if (t < 0) {
-		cout << -1 << endl;
 		return -1;
 	}
 	if (v == 0 || t == 0) {
-		cout << 0 << endl;
 		return 0;
 	}
 
-	int s = (v * t) / 56;
-	s = s == 0 ? 1 : s; 
+	int k = (v * t) / 56;
+	int s = (v * t);
+	k = k == 0 ? 1 : k;
 
 	if (v >= 0) {
-		cout << ((v * t) >= 56 ? (v * t) - (56 * s) : (v * t)) << endl;
-		return (v * t) <= 56 ? (v * t) : (v * t) - (56 * s);
+		return (v * t) <= 56 ? (v * t) : (v * t) - (56 * k);
 	}
 
-	s = s > 0 ? s : -s;
-	cout << ((v * t) >= -56 ? 56 + (v * t) : 56 + ((56 * s) + (v * t))) << endl;
-	return (v * t) >= -56 ? 56 + (v * t) : 56 + ((56 * s) + (v * t));
+	k = k > 0 ? k : -k;
+	return (v * t) >= -56 ? 56 + (v * t) : 56 + ((56 * k) + (v * t));
 }
